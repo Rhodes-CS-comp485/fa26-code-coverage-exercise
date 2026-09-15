@@ -1,0 +1,16 @@
+# Coverage settings for the in-class exercise.
+#
+# branch = True   measures branch coverage, not just line coverage.
+#                 Without it coverage.py reports only Stmts / Miss / Cover.
+#
+# source = primes limits the report to our own package. Without it, running
+#                 coverage from inside PyCharm also measures PyCharm's own
+#                 pytest helper modules, which swamps the report and makes
+#                 the headline percentage meaningless.
+#
+# PyCharm's bundled coverage does NOT read pyproject.toml (JetBrains PY-54593),
+# but it does read this file, which is coverage.py's native config format.
+
+[run]
+branch = True
+source = primes
