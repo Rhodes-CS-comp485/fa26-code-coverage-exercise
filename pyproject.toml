@@ -1,0 +1,16 @@
+[project]
+name = "primes"
+version = "0.1.0"
+description = "Code coverage analysis exercise: a small prime sieve with a deliberately weak test suite."
+# Verified running on 3.9.6 (the macOS system interpreter). The true floor is 3.6,
+# set by two f-strings in main.py; 3.9 is simply the oldest version tested.
+# NOTE: lab 1 (course registration) pins >=3.14 as a course environment policy.
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+# Install with:  pip install -e ".[dev]"   (or just:  pip install pytest)
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
